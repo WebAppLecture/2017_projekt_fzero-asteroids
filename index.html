@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+      Ist zwar nicht das beste Werk, aber es macht was es soll:
+      Man kann in einer "unendlichen" Welt umher fliegen und Meteoriten zerstören.
+
+      Ein kleiner "bug" ist enthalten.
+      Wenn man das Spiel neu Startet kommt es manchmal vor, dass man viel zu schnell ist.
+      Da es aber nicht immer auftritt, konnte ich nicht fest machen an was das liegt. ;)
+
+
+
+      Dokumentation frei nach dem Motto:
+
+        "Guter Code braucht keine Dokumentation!
+         Schlechter Code ist es nicht wert Dokumentiert zu werden!"
+    -->
+    
+    <meta charset="utf-8">
+    <title>Destroy Meteorids</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+      <h1>Destroy Meteorids</h1>
+      <div class="start">
+        <h2>I proudly present "Destroy Meteorids"</h2>
+        <h4>Controls:</h4>
+          <p>
+            Flying around: arrow keys <br />
+            Shoot: space bar
+          </p>
+
+        <h4>Your Mission:</h4>
+          <p>
+            Your mission is to destroy 20 meteorids. <br />
+            But keep in mind: if the meteorid hits you, your life will be reduced.
+          </p>
+
+
+        <button type="submit" onclick="start()">Start game</button>
+      </div>
+      <div class="won hide">
+        <p>
+          You rock the building!
+        </p>
+        <button type="submit" onclick="start()">Restart game</button>
+      </div>
+      <div class="loose hide">
+        <p>
+          You loose!
+        </p>
+        <button type="submit" onclick="start()">Restart game</button>
+      </div>
+
+      <canvas id="canvas" width="1024" height="768">
+        Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+      </canvas>
+      <div id="gamestat" class="hide">
+        <progress id="health" value="100" max="100"></progress>
+        <progress id="meteorids" value="0" max="20"></progress>
+      </div>
+
+
+      <img id="car" src="images/falcon-top.png"/>
+      <img id="bg" src="images/bg.png"/>
+      <img id="bullet" src="images/bullet.png"/>
+      <img id="meteorid" src="images/meteorid.png"/>
+
+      <audio class="music" autoplay loop>
+        <source src="music/01-opening-theme.ogg" type="audio/ogg">
+        <source src="music/01-opening-theme.mp3" type="audio/mpeg">
+        Your browser does not support this audio format.
+      </audio>
+      <audio class="play">
+        <source src="music/03-mute-city.ogg" type="audio/ogg">
+        <source src="music/03-mute-city.mp3" type="audio/mpeg">
+      </audio>
+      <audio class="bullet">
+        <source src="music/bullet.ogg" type="audio/ogg">
+        <source src="music/bullet.mp3" type="audio/mpeg">
+      </audio>
+      <audio class="lost">
+        <source src="music/lost.ogg" type="audio/ogg">
+        <source src="music/lost.mp3" type="audio/mpeg">
+      </audio>
+      <audio class="explosion">
+        <source src="music/explosion.ogg" type="audio/ogg">
+        <source src="music/explosion.mp3" type="audio/mpeg">
+      </audio>
+      <audio class="end">
+        <source src="music/ending.ogg" type="audio/ogg">
+        <source src="music/ending.mp3" type="audio/mpeg">
+      </audio>
+
+
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="js/code.js"></script>
+  </body>
+</html>

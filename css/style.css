@@ -1,0 +1,74 @@
+body {
+  background-image: url("../images/space.jpg");
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+#gamestat {
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 1024px;
+  margin: auto;
+  background-color: #909090;
+}
+
+#health {
+  margin-left: 30px;
+  background-color: green;
+}
+
+#meteorids {
+  margin-left: 640px;
+  background-color: red;
+}
+
+.start {
+  font-size: 1.5em;
+  position: absolute;
+  margin: 5% 35%;
+  color: #3fd041;
+  text-align: center;
+}
+
+.won, .loose {
+  font-size: 2em;
+  position: absolute;
+  margin: 5% 45%;
+  color: #3fd041;
+  text-align: center;
+}
+
+.hide {
+  display: none;
+}
+
+#canvas {
+  top: 0px;
+  left: 0px;
+  background: transparent;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid red;
+}
+
+#start {
+  background-color: black;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 1px solid red;
+}
+
+
+#bg, #car, #meteorid, #bullet {
+  display: none;
+}
